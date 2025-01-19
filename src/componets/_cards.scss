@@ -1,0 +1,45 @@
+@use '../settings/settings' as s;
+@use '../funcs' as f;
+.u-card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+
+    &__title {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #F1F1F1;
+    }
+
+    &__content {
+        margin-bottom: 0.5rem;
+    }
+
+    &--shadow {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &--shadow-sm {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    &--shadow-lg {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    &--hover {
+        &:hover {
+            background-color: s.$hover-color;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &--selected {
+        background: f.get-color('hover-blue');
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &--disabled {
+        background: f.get-color('grey-v1');
+    }
+}

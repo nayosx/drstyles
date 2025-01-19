@@ -1,0 +1,56 @@
+@use '../settings/settings' as settings;
+
+@mixin make-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: settings.$grid-gap;
+  padding-left: settings.$grid-gap;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin make-row {
+  display: grid;
+  grid-template-columns: repeat(settings.$grid-columns, 1fr);
+  gap: settings.$grid-gap;
+}
+
+@mixin make-col($span: 12) {
+  grid-column: span $span;
+}
+
+.container {
+  @include make-container;
+}
+
+.container-fluid {
+  @include make-container;
+}
+
+@media (min-width: settings.$container-max-width) {
+  .container {
+    max-width: settings.$container-max-width;
+  }
+}
+
+.row {
+  @include make-row;
+}
+
+@for $i from 1 through settings.$grid-columns {
+  .col-#{$i} {
+    @include make-col($i);
+  }
+}
+
+
+
+@each $breakpoint, $width in settings.$breakpoints {
+  @media (min-width: $width) {
+    @for $i from 1 through settings.$grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        @include make-col($i);
+      }
+    }
+  }
+}
