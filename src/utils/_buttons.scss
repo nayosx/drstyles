@@ -16,31 +16,36 @@
 
     box-sizing: border-box;
 
-    &.btn-primary {
+    &.u-btn-primary {
         @include funcs.btn-action('primary');
     }
 
-    &.btn-secondary {
+    &.u-btn-secondary {
         @include funcs.btn-action('secondary');
     }
 
-    &.btn-tertiary {
+    &.u-btn-tertiary {
         @include funcs.btn-action('tertiary');
     }
 
-    &.btn-ghost {
+    &.u-btn-ghost {
         @include funcs.btn-action('ghost');
     }
 
-    &.btn-danger {
+    &.u-btn-danger {
         @include funcs.btn-action('danger');
     }
 
-    &.btn-info {
+    &.u-btn-info {
         @include funcs.btn-action('info');
     }
 
     &--large {
         width: 100%;
+    }
+
+    &--no-width {
+        padding: 0;
+        width: auto;
     }
 }
