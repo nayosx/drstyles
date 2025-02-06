@@ -1,0 +1,141 @@
+@use 'sass:color';
+@use 'sass:map';
+@use 'settings' as *;
+
+$buttons: (
+    primary: (
+        background: map.get($colors, 'blue-v2'),
+        border: solid 2px map.get($colors, 'blue-v2'),
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(map.get($colors, 'blue-v2'), $lightness: -10%),
+                border: solid 2px color.adjust(map.get($colors, 'blue-v2'), $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: map.get($colors, 'blue-v2'),
+                border: solid 2px color.adjust(map.get($colors, 'blue-v2'), $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+    secondary: (
+        background: map.get($colors, 'green'),
+        border: solid 2px map.get($colors, 'green'),
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(map.get($colors, 'green'), $lightness: -10%),
+                border: solid 2px color.adjust(map.get($colors, 'green'), $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: map.get($colors, 'green'),
+                border: solid 2px color.adjust(map.get($colors, 'green'), $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+    tertiary: (
+        background: transparent,
+        border: 2px solid map.get($colors,'blue-v2'),
+        text: map.get($colors,'blue-v2'),
+        states: (
+            hover: (
+                background: transparent,
+                text: color.adjust(map.get($colors,'blue-v2'), $lightness: -10%),
+            ),
+            focus: (
+                text: map.get($colors,'blue-v2'),
+            ),
+            disabled: (
+                background: transparent,
+                border: solid 2px map.get($colors,'grey-50'),
+                text: map.get($colors,'grey-50')
+            ),
+        ),
+    ),
+    ghost: (
+        background: transparent,
+        border: solid 2px transparent,
+        text: map.get($colors,'blue-v2'),
+        states: (
+            hover: (
+                background: transparent,
+                border: solid 2px transparent,
+                text: map.get($colors,'blue')
+            ),
+            focus: (
+                background: transparent,
+                border: solid 2px transparent,
+                text: map.get($colors,'blue-v2')
+            ),
+            disabled: (
+                background: transparent,
+                border: solid 2px transparent,
+                text: map.get($colors,'grey-50')
+            ),
+        ),
+    ),
+
+
+    danger: (
+        background: map.get($colors,'red-20'),
+        border: solid 2px map.get($colors,'red-20'),
+        text: map.get($colors,'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(map.get($colors,'red-20'), $lightness: -10%),
+                border: solid 2px color.adjust(map.get($colors,'red-20'), $lightness: -10%),
+                text: map.get($colors,'white-pure'),
+            ),
+            focus: (
+                background: map.get($colors,'green'),
+                border: solid 2px color.adjust(map.get($colors,'red-20'), $lightness: -5%),
+                text: map.get($colors,'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors,'red-10'),
+                border: solid 2px map.get($colors,'red-10'),
+                text: color.adjust(map.get($colors,'red-20'), $lightness: -5%)
+            ),
+        ),
+    ),
+
+
+    info: (
+        background: map.get($colors,'cyan-20'),
+        border: solid 2px map.get($colors,'cyan-20'),
+        text: map.get($colors,'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(map.get($colors,'cyan-20'), $lightness: -10%),
+                border: solid 2px color.adjust(map.get($colors,'cyan-20'), $lightness: -10%),
+                text: map.get($colors,'white-pure'),
+            ),
+            focus: (
+                background: map.get($colors,'cyan'),
+                border: solid 2px color.adjust(map.get($colors,'cyan-20'), $lightness: -5%),
+                text: map.get($colors,'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors,'cyan-10'),
+                border: solid 2px map.get($colors,'cyan-10'),
+                text: color.adjust(map.get($colors,'cyan-20'), $lightness: -5%)
+            ),
+        ),
+    ),
+
+    
+);

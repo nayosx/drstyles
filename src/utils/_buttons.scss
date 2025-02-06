@@ -1,0 +1,46 @@
+@use '../funcs' as funcs;
+
+.u-btn {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    box-sizing: border-box;
+
+    &.btn-primary {
+        @include funcs.btn-action('primary');
+    }
+
+    &.btn-secondary {
+        @include funcs.btn-action('secondary');
+    }
+
+    &.btn-tertiary {
+        @include funcs.btn-action('tertiary');
+    }
+
+    &.btn-ghost {
+        @include funcs.btn-action('ghost');
+    }
+
+    &.btn-danger {
+        @include funcs.btn-action('danger');
+    }
+
+    &.btn-info {
+        @include funcs.btn-action('info');
+    }
+
+    &--large {
+        width: 100%;
+    }
+}

@@ -1,5 +1,6 @@
 $colors: (
   'white': #fafafa,
+  'white-pure': #ffffff,
   'black': #090C16,
   'grey-black': #282a30,
   'yellow': #FADD36,
@@ -11,7 +12,28 @@ $colors: (
   'blue-cyan': #75cfff,
   'grey-v1': #F1F1F1,
   'grey-v2': #6c757d,
-        'hover-blue': #deecf8
+  'hover-blue': #deecf8,
+  'green-10': #EEFFF6,
+  'green-20': #65D498,
+  'green-30': #009444,
+  'yellow-10': #FFEFB7,
+  'yellow-20': #FFC600,
+  'yellow-30': #C9A81C,
+  'red-10': #FFEAEB,
+  'red-20': #DF1C24,
+  'red-30': #790005,
+  'cyan-10': #F1F9FF,
+  'cyan-20': #4FABE4,
+  'cyan-30': #126293,
+  'grey-10': #FCFCFC,
+  'grey-20': #F8F8F8,
+  'grey-30': #F2F2F2,
+  'grey-40': #E6E6E6,
+  'grey-50': #D9D9D6,
+  'grey-60': #AAAAAA,
+  'grey-70': #7C7C7C,
+  'grey-80': #454545,
+  'grey-90': #141414,
 );
 
 $base-font-size: 16px;
@@ -70,20 +92,20 @@ $selected-color: #a4ffd1;
 
 
 $spacing-scale: (
-        1: 8px,
-        2: 16px,
-        3: 24px,
-        4: 32px,
-        5: 40px,
-        6: 48px,
-        7: 56px,
-        8: 64px,
-        9: 72px,
-        10: 80px,
-        11: 88px,
-        12: 96px,
-        13: 104px,
-        14: 112px,
-        15: 120px,
-        16: 128px
+  1: 8px,
+  2: 16px,
+  3: 24px,
+  4: 32px,
+  5: 40px,
+  6: 48px,
+  7: 56px,
+  8: 64px,
+  9: 72px,
+  10: 80px,
+  11: 88px,
+  12: 96px,
+  13: 104px,
+  14: 112px,
+  15: 120px,
+  16: 128px
 );

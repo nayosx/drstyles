@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use './settings/settings' as settings;
+@use './settings/buttons' as settings-buttons;
 
 @function get-color($color-name) {
     @return map.get(settings.$colors, $color-name);
@@ -11,8 +12,63 @@
             @media (max-width: #{map.get(settings.$breakpoints, $name)}) {
                 @content;
             }
-        } @else {
+        }
+
+        @else {
             @warn "Unfortunately, no value could be retrieved for `#{$name}`.";
+        }
+    }
+}
+
+@mixin btn-action($button-type) {
+    $button-styles: map.get(settings-buttons.$buttons, $button-type);
+
+    @if $button-styles {
+        background: map.get($button-styles, background);
+        border: map.get($button-styles, border);
+        color: map.get($button-styles, text);
+        cursor: pointer;
+
+        &:hover {
+            background: map.get(map.get($button-styles, states, hover), background);
+            border: map.get(map.get($button-styles, states, hover), border);
+            color: map.get(map.get($button-styles, states, hover), text);
+        }
+
+        &:focus {
+            background: map.get(map.get($button-styles, states, focus), background);
+            border: map.get(map.get($button-styles, states, focus), border);
+            color: map.get(map.get($button-styles, states, focus), text);
+        }
+
+        &:disabled {
+            background: map.get(map.get($button-styles, states, disabled), background);
+            border: map.get(map.get($button-styles, states, disabled), border);
+            color: map.get(map.get($button-styles, states, disabled), text);
+            cursor: not-allowed;
+        }
+    }
+}
+
+@mixin btn-clear {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+}
+
+@mixin shadow-base {
+    box-shadow: 17px 4px 28px 0px rgba(120, 177, 181, 0.14);
+}
+
+@mixin icon-sizes($start: 8, $end: 128, $step: 8) {
+    @for $size from $start through $end {
+        @if $size % $step ==0 {
+            .u-icon-x#{$size} {
+                font-size: #{$size}px;
+            }
         }
     }
 }
