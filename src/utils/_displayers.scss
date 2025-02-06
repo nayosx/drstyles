@@ -7,6 +7,10 @@
     flex-direction: column;
   }
 
+  &-row {
+    flex-direction: row;
+  }
+
   &-row-reverse {
     flex-direction: row-reverse;
   }
