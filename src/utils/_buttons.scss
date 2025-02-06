@@ -17,6 +17,9 @@
 
     box-sizing: border-box;
 
+    width: 15rem;
+    height: 3.6rem;
+
     &.u-btn-primary {
         @include funcs.btn-action('primary');
     }
@@ -25,12 +28,12 @@
         @include funcs.btn-action('secondary');
     }
 
-    &.u-btn-tertiary {
-        @include funcs.btn-action('tertiary');
-    }
-
     &.u-btn-ghost {
         @include funcs.btn-action('ghost');
+    }
+
+    &.u-btn-success {
+        @include funcs.btn-action('success');
     }
 
     &.u-btn-danger {
@@ -51,5 +54,22 @@
     &--no-width {
         padding: 0;
         width: auto;
+    }
+
+    &--no-height {
+        padding: 0;
+        height: auto;
+    }
+
+    &--big {
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+        height: 5.2rem;
+    }
+
+    &--mid {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        height: 4.4rem;
     }
 }
