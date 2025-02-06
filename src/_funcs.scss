@@ -49,7 +49,7 @@
 
 @mixin mk-btn-secondary-multicolors() {
     @each $color-name, $color in settings.$colors {
-        .u-btn-secondary-#{$color-name} {
+        &.u-btn-secondary-#{$color-name} {
             @include btn-mk-secondary($color-name);
         }
     }
@@ -86,7 +86,7 @@
 
 @mixin mk-btn-primary-multicolors() {
     @each $color-name, $color in settings.$colors {
-        .u-btn-primary-#{$color-name} {
+        &.u-btn-primary-#{$color-name} {
             @include btn-mk-primary($color-name);
         }
     }
