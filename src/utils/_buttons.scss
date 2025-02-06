@@ -40,6 +40,9 @@
         @include funcs.btn-action('info');
     }
 
+    @include funcs.mk-btn-primary-multicolors();
+    @include funcs.mk-btn-secondary-multicolors();
+
     &--large {
         width: 100%;
     }

@@ -26,28 +26,6 @@ $buttons: (
         ),
     ),
     secondary: (
-        background: map.get($colors, 'green'),
-        border: solid 2px map.get($colors, 'green'),
-        text: map.get($colors, 'white-pure'),
-        states: (
-            hover: (
-                background: color.adjust(map.get($colors, 'green'), $lightness: -10%),
-                border: solid 2px color.adjust(map.get($colors, 'green'), $lightness: -10%),
-                text: map.get($colors, 'white-pure'),
-            ),
-            focus: (
-                background: map.get($colors, 'green'),
-                border: solid 2px color.adjust(map.get($colors, 'green'), $lightness: -5%),
-                text: map.get($colors, 'white-pure'),
-            ),
-            disabled: (
-                background: map.get($colors, 'grey-50'),
-                border: solid 2px map.get($colors, 'grey-50'),
-                text: map.get($colors, 'grey-60')
-            ),
-        ),
-    ),
-    tertiary: (
         background: transparent,
         border: 2px solid map.get($colors,'blue-v2'),
         text: map.get($colors,'blue-v2'),
@@ -133,6 +111,29 @@ $buttons: (
                 background: map.get($colors,'cyan-10'),
                 border: solid 2px map.get($colors,'cyan-10'),
                 text: color.adjust(map.get($colors,'cyan-20'), $lightness: -5%)
+            ),
+        ),
+    ),
+
+    success: (
+        background: map.get($colors, 'green'),
+        border: solid 2px map.get($colors, 'green'),
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(map.get($colors, 'green'), $lightness: -10%),
+                border: solid 2px color.adjust(map.get($colors, 'green'), $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: map.get($colors, 'green'),
+                border: solid 2px color.adjust(map.get($colors, 'green'), $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
             ),
         ),
     ),
