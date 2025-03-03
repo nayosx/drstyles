@@ -1,0 +1,96 @@
+@use "sass:color";
+@use "../settings/settings" as settings;
+.table-normal {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th,
+    td {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #f8f8f8;
+    }
+}
+
+.table-striped {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th,
+    td {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #f8f8f8;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+}
+
+.table-interlaced {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th,
+    td {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    tbody {
+        tr {
+            td {
+                &:nth-child(odd) {
+                    background-color: #f9f9f9;
+                }
+                &:nth-child(even) {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.table-hover {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th,
+    td {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    tbody tr {
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+}
+
+@each $color-name, $color in settings.$colors {
+    .table-hover-#{$color-name} {
+        tbody tr {
+            &:hover {
+                background-color: color.adjust($color, $lightness: -10%);
+            }
+        }
+    }
+}
