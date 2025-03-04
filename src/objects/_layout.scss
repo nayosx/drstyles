@@ -1,28 +1,29 @@
+@use "../settings/settings" as settings;
 .l-general {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  
+
     &__navbar {
-      width: 100%;
-      padding: 1rem;
-      text-align: center;
+        width: 100%;
+        padding: settings.$space;
+        text-align: center;
     }
-  
+
     &__content {
-      width: 100%;
-      max-width: 400px;
-      padding: 1rem;
-      text-align: center;
+        width: 100%;
+        max-width: 400px;
+        padding: settings.$space;
+        text-align: center;
     }
-  
+
     &__footer {
-      width: 100%;
-      padding: 1rem;
-      text-align: center;
-      margin-top: auto;
+        width: 100%;
+        padding: settings.$space;
+        text-align: center;
+        margin-top: auto;
     }
 
     &__header,
@@ -32,37 +33,37 @@
             padding: 0;
         }
     }
-  }
-  
-  .l-panel {
+}
+
+.l-panel {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  
+
     &__navbar {
-      width: 100%;
-      padding: 1rem;
+        width: 100%;
+        padding: settings.$space;
     }
-  
+
     &__body {
-      flex: 1;
-      display: flex;
+        flex: 1;
+        display: flex;
     }
-  
+
     &__sidebar {
-      width: 250px;
-      padding: 1rem;
+        width: 250px;
+        padding: settings.$space;
     }
-  
+
     &__content {
-      flex: 1;
-      padding: 1rem;
+        flex: 1;
+        padding: 1rem;
     }
-  
+
     &__footer {
-      width: 100%;
-      padding: 1rem;
-      text-align: center;
+        width: 100%;
+        padding: settings.$space;
+        text-align: center;
     }
 
     &__header,
@@ -73,26 +74,26 @@
             padding: 0;
         }
     }
-  }
-  
-  .l-panel-sticky {
+}
+
+.l-panel-sticky {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  
+
     &__header {
-      padding: 1rem;
-      text-align: center;
+        padding: settings.$space;
+        text-align: center;
     }
-  
+
     &__content {
-      flex: 1;
-      padding: 1rem;
+        flex: 1;
+        padding: settings.$space;
     }
-  
+
     &__footer {
-      padding: 1rem;
-      text-align: center;
+        padding: settings.$space;
+        text-align: center;
     }
 
     &__header,
@@ -102,5 +103,4 @@
             padding: 0;
         }
     }
-  }
-  
+}

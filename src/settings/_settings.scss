@@ -1,88 +1,89 @@
 $colors: (
-  'white': #fafafa,
-  'white-pure': #ffffff,
-  'black': #090C16,
-  'grey-black': #282a30,
-  'yellow': #FADD36,
-  'green-v1': #2BCC74,
-  'green': #43a047,
-  'red': #FF5959,
-  'blue': #0288D1,
-  'blue-v2': #007bff,
-  'blue-cyan': #75cfff,
-  'grey-v1': #F1F1F1,
-  'grey-v2': #6c757d,
-  'hover-blue': #deecf8,
-  'green-10': #EEFFF6,
-  'green-20': #65D498,
-  'green-30': #009444,
-  'yellow-10': #FFEFB7,
-  'yellow-20': #FFC600,
-  'yellow-30': #C9A81C,
-  'red-10': #FFEAEB,
-  'red-20': #DF1C24,
-  'red-30': #790005,
-  'cyan-10': #F1F9FF,
-  'cyan-20': #4FABE4,
-  'cyan-30': #126293,
-  'grey-10': #FCFCFC,
-  'grey-20': #F8F8F8,
-  'grey-30': #F2F2F2,
-  'grey-40': #E6E6E6,
-  'grey-50': #D9D9D6,
-  'grey-60': #AAAAAA,
-  'grey-70': #7C7C7C,
-  'grey-80': #454545,
-  'grey-90': #141414,
+    "white": #fafafa,
+    "white-pure": #ffffff,
+    "black": #090c16,
+    "grey-black": #282a30,
+    "yellow": #fadd36,
+    "green-v1": #2bcc74,
+    "green": #43a047,
+    "red": #ff5959,
+    "blue": #0288d1,
+    "blue-v2": #007bff,
+    "blue-cyan": #75cfff,
+    "grey-v1": #f1f1f1,
+    "grey-v2": #6c757d,
+    "hover-blue": #deecf8,
+    "green-10": #eefff6,
+    "green-20": #65d498,
+    "green-30": #009444,
+    "yellow-10": #ffefb7,
+    "yellow-20": #ffc600,
+    "yellow-30": #c9a81c,
+    "red-10": #ffeaeb,
+    "red-20": #df1c24,
+    "red-30": #790005,
+    "cyan-10": #f1f9ff,
+    "cyan-20": #4fabe4,
+    "cyan-30": #126293,
+    "grey-10": #fcfcfc,
+    "grey-20": #f8f8f8,
+    "grey-30": #f2f2f2,
+    "grey-40": #e6e6e6,
+    "grey-50": #d9d9d6,
+    "grey-60": #aaaaaa,
+    "grey-70": #7c7c7c,
+    "grey-80": #454545,
+    "grey-90": #141414,
 );
 
 $base-font-size: 16px;
 
 $font-weights: (
-  'regular': 400,
-  'medium': 500,
-  'semibold': 600,
-  'bold': 700
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
 );
 
 $font-sizes: (
-  'xs': 12px,
-  'sm': 14px,
-  'base': 16px,
-  'lg': 18px,
-  'xl': 20px,
-  '2xl': 24px,
-  '3xl': 30px,
-  '4xl': 36px,
-  '5xl': 48px,
-  '6xl': 60px
+    "xs": 12px,
+    "sm": 14px,
+    "base": 16px,
+    "lg": 18px,
+    "xl": 20px,
+    "2xl": 24px,
+    "3xl": 30px,
+    "4xl": 36px,
+    "5xl": 48px,
+    "6xl": 60px,
 );
 
 $line-heights: (
-  'tight': 1.25,
-  'normal': 1.5,
-  'relaxed': 1.75,
-  'loose': 2
+    "tight": 1.25,
+    "normal": 1.5,
+    "relaxed": 1.75,
+    "loose": 2,
 );
 
 $grid-columns: 12;
 $grid-gap: 1rem;
 $container-max-width: 1200px;
+$space: 1rem;
 
 $breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
 );
 
 $circle-sizes: (
-  'xs': 24px,
-  'sm': 32px,
-  'md': 48px,
-  'lg': 64px,
-  'xl': 96px,
-  'xxl': 128px
+    "xs": 24px,
+    "sm": 32px,
+    "md": 48px,
+    "lg": 64px,
+    "xl": 96px,
+    "xxl": 128px,
 );
 
 $primary-color: #b7e2fa;
@@ -90,22 +91,21 @@ $secondary-color: #b8fdd6;
 $hover-color: #deecf8;
 $selected-color: #a4ffd1;
 
-
 $spacing-scale: (
-  1: 8px,
-  2: 16px,
-  3: 24px,
-  4: 32px,
-  5: 40px,
-  6: 48px,
-  7: 56px,
-  8: 64px,
-  9: 72px,
-  10: 80px,
-  11: 88px,
-  12: 96px,
-  13: 104px,
-  14: 112px,
-  15: 120px,
-  16: 128px
+    1: 8px,
+    2: 16px,
+    3: 24px,
+    4: 32px,
+    5: 40px,
+    6: 48px,
+    7: 56px,
+    8: 64px,
+    9: 72px,
+    10: 80px,
+    11: 88px,
+    12: 96px,
+    13: 104px,
+    14: 112px,
+    15: 120px,
+    16: 128px,
 );
