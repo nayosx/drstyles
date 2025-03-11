@@ -19,6 +19,11 @@
         text-align: center;
     }
 
+    &__body {
+        flex: 1;
+        display: flex;
+    }
+
     &__footer {
         width: 100%;
         padding: settings.$space;
@@ -27,7 +32,9 @@
     }
 
     &__header,
+    &__navbar,
     &__content,
+    &__body,
     &__footer {
         &--no-padding {
             padding: 0;
@@ -67,6 +74,7 @@
     }
 
     &__header,
+    &__navbar,
     &__content,
     &__footer,
     &__sidebar {
@@ -86,7 +94,8 @@
         text-align: center;
     }
 
-    &__content {
+    &__content,
+    &__body {
         flex: 1;
         padding: settings.$space;
     }
@@ -98,6 +107,7 @@
 
     &__header,
     &__content,
+    &__body,
     &__footer {
         &--no-padding {
             padding: 0;
