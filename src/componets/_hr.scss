@@ -5,6 +5,8 @@ hr {
     border-top: 1px solid funcs.get-color("grey-v2");
     margin: 1rem 0;
     opacity: 0.8;
+    position: relative;
+    z-index: 1;
 }
 
 @each $color-name, $color in settings.$colors {

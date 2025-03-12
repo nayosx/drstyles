@@ -5,40 +5,24 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    z-index: 1;
+    position: relative;
 
     &__navbar {
         width: 100%;
-        padding: settings.$space;
+        padding: 0 settings.$space;
         text-align: center;
     }
 
     &__content {
         width: 100%;
         max-width: 400px;
-        padding: settings.$space;
+        padding: 0 settings.$space;
         text-align: center;
     }
 
     &__body {
         flex: 1;
-        display: flex;
-    }
-
-    &__footer {
-        width: 100%;
-        padding: settings.$space;
-        text-align: center;
-        margin-top: auto;
-    }
-
-    &__header,
-    &__navbar,
-    &__content,
-    &__body,
-    &__footer {
-        &--no-padding {
-            padding: 0;
-        }
     }
 }
 
@@ -46,41 +30,34 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    z-index: 1;
+    position: relative;
 
     &__navbar {
         width: 100%;
-        padding: settings.$space;
-    }
-
-    &__body {
-        flex: 1;
-        display: flex;
-    }
-
-    &__sidebar {
-        width: 250px;
-        padding: settings.$space;
+        padding: 0 settings.$space;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__content {
         flex: 1;
-        padding: 1rem;
+        display: flex;
+        padding: 0;
     }
 
-    &__footer {
-        width: 100%;
-        padding: settings.$space;
-        text-align: center;
-    }
-
-    &__header,
-    &__navbar,
-    &__content,
-    &__footer,
     &__sidebar {
-        &--no-padding {
-            padding: 0;
+        width: 250px;
+        padding: 0 settings.$space;
+
+        &.hide {
+            display: none;
         }
+    }
+
+    &__body {
+        flex: 1;
+        padding: 0 settings.$space;
     }
 }
 
@@ -89,26 +66,33 @@
     flex-direction: column;
     min-height: 100vh;
 
-    &__header {
-        padding: settings.$space;
-        text-align: center;
-    }
-
     &__content,
     &__body {
         flex: 1;
-        padding: settings.$space;
+        padding: 0 settings.$space;
+    }
+}
+
+
+.l-general,
+.l-panel,
+.l-panel-sticky {
+
+    &__header {
+        padding: 0 settings.$space;
     }
 
     &__footer {
-        padding: settings.$space;
-        text-align: center;
+        width: 100%;
+        padding: 0 settings.$space;
     }
 
     &__header,
+    &__navbar,
     &__content,
     &__body,
-    &__footer {
+    &__footer,
+    &__sidebar {
         &--no-padding {
             padding: 0;
         }
