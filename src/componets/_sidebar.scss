@@ -1,3 +1,4 @@
+@use "../settings/settings" as settings;
 .sidebar-container {
     position: fixed;
     top: 0;
@@ -27,10 +28,7 @@
     border: none;
     background: transparent;
     cursor: pointer;
-    font-size: 18px;
-    //position: absolute;
-    right: 10px;
-    top: 10px;
+    font-size: 1.8rem;
   }
   
   .sidebar-menu ul {
@@ -39,10 +37,16 @@
   }
   
   .sidebar-menu li {
-    margin: 20px 0;
+    margin: settings.$space 0;
   }
   
   .sidebar-menu a {
     text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
   
