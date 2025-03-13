@@ -43,10 +43,16 @@
   .sidebar-menu a {
     text-decoration: none;
     width: 100%;
+    color: inherit;
 
     &:hover {
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &.active,
+    &:visited {
+      color: inherit;
     }
   }
   
