@@ -80,4 +80,15 @@
         text-align: right;
         justify-content: flex-end;
     }
+
+    &--circle {
+        border-radius: 50%;
+
+        @each $size in 8, 16, 24, 32, 40, 48, 64, 72, 80, 96, 128 {
+            &-x#{$size} {
+              width: #{$size}px;
+              height: #{$size}px;
+            }
+          }
+    }
 }
