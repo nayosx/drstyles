@@ -135,7 +135,7 @@
     box-shadow: 17px 4px 28px 0px rgba(120, 177, 181, 0.14);
 }
 
-@mixin icon-sizes($start: 8, $end: 128, $step: 8) {
+@mixin icon-sizes($start: 8, $end: 128, $step: 4) {
     @for $size from $start through $end {
         @if $size % $step ==0 {
             .u-icon-x#{$size} {
