@@ -44,6 +44,34 @@
         @include funcs.btn-action('info');
     }
 
+    &.u-btn-facebook {
+        @include funcs.btn-action('facebook');
+    }
+
+    &.u-btn-instagram {
+        @include funcs.btn-action('instagram');
+    }
+
+    &.u-btn-x {
+        @include funcs.btn-action('x');
+    }
+
+    &.u-btn-youtube {
+        @include funcs.btn-action('youtube');
+    }
+
+    &.u-btn-linkedin {
+        @include funcs.btn-action('linkedin');
+    }
+
+    &.u-btn-tiktok {
+        @include funcs.btn-action('tiktok');
+    }
+
+    &.u-btn-whatsapp {
+        @include funcs.btn-action('whatsapp');
+    }
+
     @include funcs.mk-btn-primary-multicolors();
     @include funcs.mk-btn-secondary-multicolors();
 
@@ -56,6 +84,11 @@
     }
 
     &--no-height {
+        height: auto;
+    }
+
+    &--simple {
+        width: auto;
         height: auto;
     }
 

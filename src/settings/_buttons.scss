@@ -138,5 +138,166 @@ $buttons: (
         ),
     ),
 
+    facebook: (
+        background: #1877f2,
+        border: solid 2px #1877f2,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#1877f2, $lightness: -10%),
+                border: solid 2px color.adjust(#1877f2, $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #1877f2,
+                border: solid 2px color.adjust(#1877f2, $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
+    instagram: (
+        background: #e4405f,
+        border: solid 2px #e4405f,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#e4405f, $lightness: -10%),
+                border: solid 2px color.adjust(#e4405f, $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #e4405f,
+                border: solid 2px color.adjust(#e4405f, $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
+    x: (
+        background: #000000,
+        border: solid 2px #000000,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#000000, $lightness: 10%),
+                border: solid 2px color.adjust(#000000, $lightness: 10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #000000,
+                border: solid 2px color.adjust(#000000, $lightness: 5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
+    youtube: (
+        background: #ff0000,
+        border: solid 2px #ff0000,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#ff0000, $lightness: -10%),
+                border: solid 2px color.adjust(#ff0000, $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #ff0000,
+                border: solid 2px color.adjust(#ff0000, $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
+    linkedin: (
+        background: #0a66c2,
+        border: solid 2px #0a66c2,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#0a66c2, $lightness: -10%),
+                border: solid 2px color.adjust(#0a66c2, $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #0a66c2,
+                border: solid 2px color.adjust(#0a66c2, $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
+    tiktok: (
+        background: #010101,
+        border: solid 2px #010101,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#010101, $lightness: 10%),
+                border: solid 2px color.adjust(#010101, $lightness: 10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #010101,
+                border: solid 2px color.adjust(#010101, $lightness: 5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
+    whatsapp: (
+        background: #25d366,
+        border: solid 2px #25d366,
+        text: map.get($colors, 'white-pure'),
+        states: (
+            hover: (
+                background: color.adjust(#25d366, $lightness: -10%),
+                border: solid 2px color.adjust(#25d366, $lightness: -10%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            focus: (
+                background: #25d366,
+                border: solid 2px color.adjust(#25d366, $lightness: -5%),
+                text: map.get($colors, 'white-pure'),
+            ),
+            disabled: (
+                background: map.get($colors, 'grey-50'),
+                border: solid 2px map.get($colors, 'grey-50'),
+                text: map.get($colors, 'grey-60')
+            ),
+        ),
+    ),
+
     
 );

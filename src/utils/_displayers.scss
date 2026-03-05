@@ -15,12 +15,20 @@
     flex-direction: row;
   }
 
+  &-row-responsive {
+    flex-direction: column;
+  }
+
   &-row-reverse {
     flex-direction: row-reverse;
   }
 
   &-column-reverse {
     flex-direction: column-reverse;
+  }
+
+  &-column-responsive {
+    flex-direction: row;
   }
 
   &-justify {
@@ -165,6 +173,12 @@
       }
       .u-d-grid-mobile {
         display: none;
+      }
+      .u-d-flex-row-responsive {
+        flex-direction: row;
+      }
+      .u-d-flex-column-responsive {
+        flex-direction: column;
       }
     }
   }

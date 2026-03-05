@@ -54,3 +54,78 @@
     }
   }
 }
+
+/* BEMIT Grid Object */
+.o-grid {
+  display: grid;
+  grid-template-columns: repeat(settings.$grid-columns, minmax(0, 1fr));
+  gap: settings.$grid-gap;
+
+  &--dense {
+    grid-auto-flow: row dense;
+  }
+}
+
+@for $i from 1 through settings.$grid-columns {
+  .o-grid--cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+@each $space-step, $space-value in settings.$spacing-scale {
+  .o-grid--gap-#{$space-step} {
+    gap: $space-value;
+  }
+
+  .o-grid--gap-x-#{$space-step} {
+    column-gap: $space-value;
+  }
+
+  .o-grid--gap-y-#{$space-step} {
+    row-gap: $space-value;
+  }
+}
+
+.o-grid__item {
+  min-width: 0;
+}
+
+@for $i from 1 through settings.$grid-columns {
+  .o-grid__item--span-#{$i} {
+    grid-column: span #{$i};
+  }
+
+  .o-grid__item--start-#{$i} {
+    grid-column-start: #{$i};
+  }
+}
+
+@for $i from 2 through (settings.$grid-columns + 1) {
+  .o-grid__item--end-#{$i} {
+    grid-column-end: #{$i};
+  }
+}
+
+@each $breakpoint, $width in settings.$breakpoints {
+  @media (min-width: $width) {
+    @for $i from 1 through settings.$grid-columns {
+      .o-grid--#{$breakpoint}-cols-#{$i} {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      }
+
+      .o-grid__item--#{$breakpoint}-span-#{$i} {
+        grid-column: span #{$i};
+      }
+
+      .o-grid__item--#{$breakpoint}-start-#{$i} {
+        grid-column-start: #{$i};
+      }
+    }
+
+    @for $i from 2 through (settings.$grid-columns + 1) {
+      .o-grid__item--#{$breakpoint}-end-#{$i} {
+        grid-column-end: #{$i};
+      }
+    }
+  }
+}
