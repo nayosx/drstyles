@@ -7,6 +7,18 @@
     @return map.get(settings.$colors, $color-name);
 }
 
+@function badge-contrast-color($badge-color) {
+    @if color.channel($badge-color, "lightness", $space: hsl) > 65% {
+        @return get-color("grey-black");
+    }
+
+    @return get-color("white-pure");
+}
+
+@function badge-soft-background($badge-color) {
+    @return color.mix(get-color("white-pure"), $badge-color, 88%);
+}
+
 @mixin responsive($names: ()) {
     @each $name in $names {
         @if map-has-key(settings.$breakpoints, $name) {

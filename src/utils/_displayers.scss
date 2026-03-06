@@ -19,6 +19,11 @@
     flex-direction: column;
   }
 
+  &-row-responsive-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   &-row-reverse {
     flex-direction: row-reverse;
   }
@@ -176,6 +181,10 @@
       }
       .u-d-flex-row-responsive {
         flex-direction: row;
+      }
+      .u-d-flex-row-responsive-start {
+        justify-content: initial;
+        align-items: initial;
       }
       .u-d-flex-column-responsive {
         flex-direction: column;

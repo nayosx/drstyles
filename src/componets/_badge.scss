@@ -1,0 +1,75 @@
+@use "../settings/settings" as settings;
+@use "../funcs" as funcs;
+
+.c-badge {
+    --badge-bg: #{funcs.get-color("grey-v1")};
+    --badge-color: #{funcs.get-color("grey-black")};
+    --badge-border: transparent;
+    --badge-soft-bg: #{funcs.get-color("grey-20")};
+    --badge-soft-color: #{funcs.get-color("grey-black")};
+    --badge-soft-border: transparent;
+    --badge-outline-color: var(--badge-bg);
+    --badge-padding-y: 0.25rem;
+    --badge-padding-x: 0.625rem;
+    --badge-font-size: 0.75rem;
+    --badge-font-weight: 600;
+    --badge-line-height: 1;
+    --badge-radius: 9999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    min-height: 1.5rem;
+    padding: var(--badge-padding-y) var(--badge-padding-x);
+    border: 1px solid var(--badge-border);
+    border-radius: var(--badge-radius);
+    background-color: var(--badge-bg);
+    color: var(--badge-color);
+    font-size: var(--badge-font-size);
+    font-weight: var(--badge-font-weight);
+    line-height: var(--badge-line-height);
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &--soft {
+        background-color: var(--badge-soft-bg);
+        color: var(--badge-soft-color);
+        border-color: var(--badge-soft-border);
+    }
+
+    &--outline {
+        background-color: transparent;
+        color: var(--badge-outline-color);
+        border-color: currentColor;
+    }
+
+    &--square {
+        --badge-radius: 0.375rem;
+    }
+
+    &--sm {
+        --badge-padding-y: 0.125rem;
+        --badge-padding-x: 0.5rem;
+        --badge-font-size: 0.6875rem;
+    }
+
+    &--lg {
+        --badge-padding-y: 0.375rem;
+        --badge-padding-x: 0.75rem;
+        --badge-font-size: 0.875rem;
+    }
+}
+
+@each $color-name, $badge-color in settings.$colors {
+    .c-badge--#{$color-name} {
+        --badge-bg: #{$badge-color};
+        --badge-color: #{funcs.badge-contrast-color($badge-color)};
+        --badge-border: #{$badge-color};
+        --badge-soft-bg: #{funcs.badge-soft-background($badge-color)};
+        --badge-soft-color: #{funcs.get-color("grey-black")};
+        --badge-soft-border: transparent;
+        --badge-outline-color: #{$badge-color};
+    }
+}

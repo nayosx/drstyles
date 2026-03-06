@@ -13,6 +13,7 @@ Librería de estilos SCSS utilitaria + componentes, orientada a proyectos web r�
 - formularios
 - dialog
 - sidebar/navbar
+- badges
 
 ## Instalación
 
@@ -189,9 +190,19 @@ Otros:
 </div>
 ```
 
+Forzar alineación a `start` solo mientras está en modo responsive:
+
+```html
+<div class="u-d-flex u-d-flex-row-responsive u-d-flex-justify-center u-d-flex-align-center u-d-flex-row-responsive-start">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+```
+
 Comportamiento:
 
 - `.u-d-flex-row-responsive`: mobile `column`, desktop `row`
+- `.u-d-flex-row-responsive-start`: en mobile fuerza `justify-content` y `align-items` a `flex-start`
 - `.u-d-flex-column-responsive`: mobile `row`, desktop `column`
 
 ### Display mobile / desktop helpers
@@ -258,6 +269,42 @@ Estas variantes se generan a partir del mapa de colores:
 <button class="u-btn u-btn-primary u-btn--text-left">Text left</button>
 <button class="u-btn u-btn-primary u-btn--text-right">Text right</button>
 <button class="u-btn u-btn-primary u-btn--circle u-btn--x48">Circle</button>
+
+## Badges
+
+Clase base:
+
+```html
+<span class="c-badge">Default</span>
+```
+
+Combinación por color y variante:
+
+```html
+<span class="c-badge c-badge--blue">Nuevo</span>
+<span class="c-badge c-badge--soft c-badge--green">Activo</span>
+<span class="c-badge c-badge--outline c-badge--red">Urgente</span>
+```
+
+Modificadores:
+
+- `.c-badge--soft`
+- `.c-badge--outline`
+- `.c-badge--square`
+- `.c-badge--sm`
+- `.c-badge--lg`
+- `.c-badge--white`, `.c-badge--blue`, `.c-badge--green`, etc. para cualquier color del mapa `settings.$colors`
+
+Personalización rápida:
+
+```html
+<span
+  class="c-badge"
+  style="--badge-bg:#111827; --badge-color:#fff; --badge-radius:0.5rem;"
+>
+  Custom
+</span>
+```
 ```
 
 Tamaños de círculo disponibles:
@@ -625,7 +672,7 @@ ISC
 u-d-flex
 u-d-flex-inline
 u-d-flex-row | u-d-flex-column | u-d-flex-row-reverse | u-d-flex-column-reverse
-u-d-flex-row-responsive | u-d-flex-column-responsive
+u-d-flex-row-responsive | u-d-flex-row-responsive-start | u-d-flex-column-responsive
 u-d-flex-justify-start|end|center|between|around
 u-d-flex-align-start|end|center|stretch|baseline
 u-d-flex-wrap | u-d-flex-nowrap
