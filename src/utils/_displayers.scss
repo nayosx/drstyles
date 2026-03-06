@@ -19,11 +19,6 @@
     flex-direction: column;
   }
 
-  &-row-responsive-start {
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
   &-row-reverse {
     flex-direction: row-reverse;
   }
@@ -78,6 +73,11 @@
     &-baseline {
       align-items: baseline;
     }
+  }
+
+  &-row-responsive-start {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &-wrap {
